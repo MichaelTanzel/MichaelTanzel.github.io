@@ -167,6 +167,25 @@ h2 {
 }
 .sec-head + .sub { margin-top: 0; }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 320px) 1fr;
+  align-items: center;
+  gap: 2.5rem clamp(2rem, 5vw, 4rem);
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  background: var(--panel);
+  box-shadow: 12px 12px 0 var(--pop);
+  object-fit: cover;
+  object-position: center 20%;
+}
+
 .about {
   max-width: 28em;
   margin: 0;
@@ -388,6 +407,8 @@ footer {
   .proj .detail { grid-template-columns: 1fr; }
   .proj .meta .kind { display: none; }
   .proj summary { padding: 1.25rem 0; }
+  .about-grid { grid-template-columns: 1fr; }
+  .portrait { max-width: 260px; box-shadow: 8px 8px 0 var(--pop); }
 }
 
 @media (max-width: 480px) {

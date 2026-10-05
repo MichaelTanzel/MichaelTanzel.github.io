@@ -5,6 +5,7 @@
    ========================================================== */
 const DATA = {
   fullName: "Michael Jemmy Tanzel",
+  photo: "profile.jpg",
   name: ["Michael", "Tanzel"],
   role: "Computer Science student at BINUS University, focused on frontend, UI/UX, and database engineering.",
   about:
@@ -16,7 +17,7 @@ const DATA = {
   ],
 
   skills: [
-    { group: "Frontend and UI/UX", items: ["UI/UX Design", "HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Responsive Design"] },
+    { group: "Frontend and UI/UX", items: ["UI/UX Design", "Figma", "HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Responsive Design"] },
     { group: "Data visualization", items: ["Leaflet", "Recharts"] },
     { group: "Currently learning", items: ["Software Engineering", "Database Systems"] },
     { group: "Working style", items: ["Communication", "Collaboration", "Problem-solving", "Adaptability"] }
@@ -34,10 +35,10 @@ const DATA = {
     },
     {
       title: "Noisecore",
-      role: "Solo project for my Artificial Intelligence course",
-      desc: "A multi-page website for an audio technology brand, with a product catalog, deals, a membership page, and an about page. Designed and built entirely by me.",
+      role: "Solo project for my Human-Computer Interaction (HCI) course",
+      desc: "A responsive five-page website for an audio technology brand, with a filterable product catalog, deals and promo codes, and a membership form with validation and a password strength indicator. Prototyped in Figma, then built in plain HTML, CSS, and JavaScript.",
       url: "https://noicecore-michael.vercel.app",
-      stack: ["HTML", "CSS", "JavaScript", "Vercel"],
+      stack: ["HTML5", "CSS3", "JavaScript", "Figma", "Vercel"],
       hue: 262
     }
   ],
@@ -139,6 +140,9 @@ function renderHero() {
 }
 
 function renderContent() {
+  const portrait = $("portrait");
+  portrait.src = DATA.photo;
+  portrait.alt = `Portrait of ${DATA.fullName}`;
   $("about-text").textContent = DATA.about;
 
   render(
