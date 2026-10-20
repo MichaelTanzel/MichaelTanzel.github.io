@@ -95,6 +95,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   transition: transform .15s;
 }
 
+.site-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+.btn.ghost {
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+}
+
 .tags { display: flex; flex-wrap: wrap; gap: .5rem; }
 .tags li {
   padding: .2rem .7rem;
